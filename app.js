@@ -7,9 +7,27 @@ const find = document.querySelector("#find-out")
 const showresult = document.querySelector("#show-result");
 
 
+
+// function validateinputs()
+// {
+//     if(Number(bdate.value)&& Number(lnum.value))
+//     {
+//     console.log("working");
+//     }
+//     else
+//     {
+//         showresult.innerText="Please select both the fields";
+//     }
+// }
+
+
+
 function findout()
 {
     // showresult.style.display = "none";
+
+
+    // validateinputs();
     console.log("Hey");
     // console.log(bdate)
     console.log(bdate.value) //working
@@ -21,16 +39,23 @@ function findout()
     const num = Number(lnum.value);
 
     console.log(typeof num);
-
-    if((sumofbdate % num )===0)
+    if(sumofbdate&&num)
     {
-        showresult.innerText="Your birthdate is lucky!";
-
+        if((sumofbdate % num )===0)
+        {
+            showresult.innerText="Your birthdate is lucky!";
+    
+        }
+        else
+        {
+            showresult.innerText="Your birthdate is not lucky!";
+        }
     }
     else
     {
-        showresult.innerText="Your birthdate is not lucky!";
+        showresult.innerText="Please enter both the fields";
     }
+    
    
 }
 
