@@ -4,7 +4,7 @@ const lnum = document.querySelector("#lucky-num");
 
 const find = document.querySelector("#find-out")
 
-
+const showresult = document.querySelector("show-result");
 
 
 function findout()
@@ -17,9 +17,12 @@ function findout()
     const sumofbdate = countbirthdate(dateofbirth);
     console.log("sum",sumofbdate)
 
-    const finalsum = Number(lnum.value)+sumofbdate
+    if(Number(sumofbdate % lnum.value%)===0)
+    {
+        showresult.s
+    }
 
-    console.log(finalsum)
+
    
 }
 function countbirthdate(dateofbirth)
