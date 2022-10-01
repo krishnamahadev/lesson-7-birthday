@@ -16,6 +16,10 @@ function findout()
     console.log(dateofbirth) //not working
     const sumofbdate = countbirthdate(dateofbirth);
     console.log("sum",sumofbdate)
+
+    const finalsum = Number(lnum.value)+sumofbdate
+
+    console.log(finalsum)
    
 }
 function countbirthdate(dateofbirth)
