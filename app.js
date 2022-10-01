@@ -4,27 +4,37 @@ const lnum = document.querySelector("#lucky-num");
 
 const find = document.querySelector("#find-out")
 
-const showresult = document.querySelector("show-result");
+const showresult = document.querySelector("#show-result");
 
 
 function findout()
 {
+    // showresult.style.display = "none";
     console.log("Hey");
     // console.log(bdate)
     console.log(bdate.value) //working
     const dateofbirth = bdate.value;
     console.log(dateofbirth) //not working
     const sumofbdate = countbirthdate(dateofbirth);
-    console.log("sum",sumofbdate)
+    console.log("sum",sumofbdate);
 
-    if(Number(sumofbdate % lnum.value%)===0)
+    const num = Number(lnum.value);
+
+    console.log(typeof num);
+
+    if((sumofbdate % num )===0)
     {
-        showresult.s
+        showresult.innerText="Your birthdate is lucky!";
+
     }
-
-
+    else
+    {
+        showresult.innerText="Your birthdate is not lucky!";
+    }
    
 }
+
+
 function countbirthdate(dateofbirth)
 {
     dateofbirth = dateofbirth.replaceAll("-","");
